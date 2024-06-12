@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+body{
+  height: 100vh;
+  width: 100%;
+}
+#app{
+  width: 100%;
+  height: 100%;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.threejs{
+  width: 100%;
+  height: 100%;
+  
+}
+.optionsPannel{
+  height: 100vh;
+  width: 40%;
+  background-color: rgba(50,50,50,0.5);
+  transition: all 0.2s ease-in;
+  overflow-x: hidden;  
+  position: relative;
+  transition: all 0.2s ease;
+}
+.optionsHeading{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.optionsHeading>*{
+  font-size: 22px;
+  color: white;
+  padding: 10px;
+}
+.close{
+  width: 15%;  
+}
+.options{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: white;  
+}
+.options .number{
+  padding-left: 20px;
+}
+.optionValue{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.optionValue .top{
+  font-size: large;
+}
+.optionValue .bottom{
+  font-size: small;
+}
+.overContainer{
+  position: absolute;
+  display: flex;
+  width:0%;
+  background-color: rgba(50,50,50,0.5);
+  height: 100vh;
+  top: 0;
+  left: 25%;
+  transition: all 0.5s ease;
+  right: 0;
+  z-index: 5;
+}
+
+.open{
+  width: 100%;
+}
+.openOptions{
+  width: 60%;
+}
