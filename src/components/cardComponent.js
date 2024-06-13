@@ -88,12 +88,32 @@ export class CardComponent extends HTMLElement{
                 
                 if(CardComponent.counter%2===0)
                 {
+                    let arr=[]
+                    stateManagement.segementSelected.map(i=>{
+                        arr.push(i.name)
+                    })
+                    let keys=[]
+                    arr.map(i=>{
+                        let arr=Object.keys(this.data[i]).filter(i=>{
+                            if(i=="name" || i=="image" || i=="price")
+                                return false;
+                            else 
+                                return true;    
+                        })
+                        keys.push({name:i,child:arr})                        
+                    })
 
+                    
+                    console.log(keys)
                 }
                 else
                 {
-
+                    while(overContainer.hasChildNodes())
+                        {
+                            overContainer.removeChild(overContainer.firstChild)
+                        }   
                 }
+                CardComponent.counter++
             }
         }    
         

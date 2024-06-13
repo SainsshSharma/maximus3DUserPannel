@@ -66,20 +66,6 @@ export class partComponent extends HTMLElement{
         }
     }    
 
-    changeContent(prev,curr)
-    {
-        
-        stateManagement.segementSelected=stateManagement.segementSelected.filter(i=>{
-            if(prev===i.name)
-                return false
-            else
-                return true
-        })
-        stateManagement.segementSelected.push({name:curr,price:this.data[curr].price})
-
-        console.log(stateManagement)
-    }
-
     async removeObject()
     {
         

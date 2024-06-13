@@ -35,7 +35,7 @@ export class ThreeJsInitialiser{
         //Scene
         this.scene=new THREE.Scene()
         //Renderer
-        this.renderer=new THREE.WebGLRenderer({antialias:true,alpha:true})
+        this.renderer=new THREE.WebGLRenderer({antialias:true,alpha:true,preserveDrawingBuffer:true})
         this.renderer.setSize(
           this.element.clientWidth,
           this.element.clientHeight
