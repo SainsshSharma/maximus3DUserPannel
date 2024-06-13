@@ -1,14 +1,15 @@
 import { LoadHtml } from "./loadHtml";
-import { Utility } from "./sidePannel";
+
 import { LoadCss } from "./loadCss";
 import { ThreeJsInitialiser } from "./threeJsMain";
 import { CardComponent } from "../components/cardComponent";
 const url="https://api.maximus3d.com/"
 
 window.onload=()=>{
+    
     // LoadHtml()
     LoadCss()
-    Utility()    
+    // Utility()    
     main()
 }
 
@@ -64,11 +65,6 @@ function getAllDataFromKey(Key,model,intializer)
         document.querySelector('.optionsPannel').appendChild(card)        
     })
 
-    // let card=new CardComponent(data.length,"Color",undefined,intializer,model)
-    // document.querySelector('.optionsPannel').appendChild(card)    
-
-    // let card1=new CardComponent(data.length+1,"Length",undefined,intializer,model)
-    // document.querySelector('.optionsPannel').appendChild(card1)    
     
 }
 

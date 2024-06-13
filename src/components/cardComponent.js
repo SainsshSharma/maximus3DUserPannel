@@ -1,3 +1,5 @@
+import stateManagement from "../states/stateManagement";
+import { partComponent } from "./partComponent";
 function sectionComponent(counter,heading){
     const cardTemplate=document.createElement('template')
     cardTemplate.innerHTML=`
@@ -26,6 +28,7 @@ function sectionComponent(counter,heading){
 }
 
 export class CardComponent extends HTMLElement{
+    static counter=0;
     constructor(counter,heading,meshData,intializer,data)
     {
         super()
@@ -35,21 +38,45 @@ export class CardComponent extends HTMLElement{
         this.data=data
         this.intializer=intializer
         this.price=this.data[this.meshData.name[0]].price
+        CardComponent.counter=0
         
         const shadowRoot=this.attachShadow({mode:'open'})
         
         this.LoadModel()
         shadowRoot.appendChild(sectionComponent(this.counter,this.heading.toUpperCase()))
+
+        stateManagement.segementSelected.push(this.meshData.name[0])
+        console.log(this.data)
         this.onclick=()=>{
             let overContainer=document.querySelector('.overContainer')
             overContainer.classList.toggle('open')
 
-            
-            
-            
-            console.log()
-        }
-        
+            if(CardComponent.counter%2===0)
+            {
+                Object.keys(this.data.segment).map(i=>{
+
+                    if(i==this.heading)
+                    {                        
+                        this.data.segment[heading].map(i=>{
+                            let img=this.data[i.parts_name].image
+                            let name=this.data[i.parts_name].name
+                            
+                            let part=new partComponent(this.intializer,img,name,this.meshData.name[0])
+                            overContainer.appendChild(part)
+                        })
+                    }
+                })
+            }
+            else
+            {
+                while(overContainer.hasChildNodes())
+                {
+                    overContainer.removeChild(overContainer.firstChild)
+                }   
+            }
+            CardComponent.counter++
+
+        }        
         
     }
 
