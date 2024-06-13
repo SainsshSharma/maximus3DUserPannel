@@ -29,7 +29,7 @@ function sectionComponent(counter,heading){
 
 export class CardComponent extends HTMLElement{
     static counter=0;
-    constructor(counter,heading,meshData,intializer,data)
+    constructor(counter,heading,meshData,intializer,data,type)
     {
         super()
         this.counter=counter
@@ -38,15 +38,17 @@ export class CardComponent extends HTMLElement{
         this.data=data
         this.intializer=intializer
         this.price=this.data[this.meshData.name[0]].price
+        this.type=type;
         CardComponent.counter=0
         
         const shadowRoot=this.attachShadow({mode:'open'})
-        
-        this.LoadModel()
         shadowRoot.appendChild(sectionComponent(this.counter,this.heading.toUpperCase()))
+        if(this.type==='segment')
+        {
+                this.LoadModel()
 
-        stateManagement.segementSelected.push(this.meshData.name[0])
-        console.log(this.data)
+        stateManagement.segementSelected.push({name:this.meshData.name[0],price:this.data[this.meshData.name[0]].price})
+        
         this.onclick=()=>{
             let overContainer=document.querySelector('.overContainer')
             overContainer.classList.toggle('open')
@@ -61,7 +63,7 @@ export class CardComponent extends HTMLElement{
                             let img=this.data[i.parts_name].image
                             let name=this.data[i.parts_name].name
                             
-                            let part=new partComponent(this.intializer,img,name,this.meshData.name[0])
+                            let part=new partComponent(this.intializer,img,name,this.meshData.name[0],this.data)
                             overContainer.appendChild(part)
                         })
                     }
@@ -76,7 +78,24 @@ export class CardComponent extends HTMLElement{
             }
             CardComponent.counter++
 
-        }        
+        }    
+    }
+    else if(this.type==="color")
+        {
+            this.onclick=()=>{
+                let overContainer=document.querySelector('.overContainer')
+                overContainer.classList.toggle('open')
+                
+                if(CardComponent.counter%2===0)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+        }    
         
     }
 

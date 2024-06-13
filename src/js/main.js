@@ -60,9 +60,19 @@ function getAllDataFromKey(Key,model,intializer)
         data.push({heading,name,image,objectName})
     })
 
+    console.log(data)
+    data.push({heading:['color'],name:['name'],image:['image'],objecName:['objectName']})
     data.map((i,indx)=>{
-        let card=new CardComponent(indx,i.heading[0],i,intializer,model)
-        document.querySelector('.optionsPannel').appendChild(card)        
+        if(i.heading[0]==="color")
+        {
+            let card=new CardComponent(indx,i.heading[0],i,intializer,model,"color")
+            document.querySelector('.optionsPannel').appendChild(card)        
+        }
+        else
+        {
+            let card=new CardComponent(indx,i.heading[0],i,intializer,model,"segment")
+            document.querySelector('.optionsPannel').appendChild(card)        
+        }
     })
 
     
@@ -73,7 +83,7 @@ async function main()
     const intializer=new ThreeJsInitialiser(await getFile(5))
     await intializer.start()
     let model=await getJson(5)
-    console.log(model)
+    
     getAllDataFromKey(model.segment,model,intializer)
     
 }

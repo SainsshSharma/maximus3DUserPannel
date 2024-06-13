@@ -15,9 +15,12 @@ function sectionComponent(counter,heading){
         color: white;
         padding: 10px;
       }
+      .color{
+        background-color:${counter};
+      }
     </style>
     <div class="optionsHeading over">
-        <div><img src="https://api.maximus3d.com/${counter}" width=50 height=50></div>
+        <div class="color"></div>
         <div>${heading}</div>
         <i class='bx bx-chevrons-right optionsBtn'></i>
     </div>
@@ -26,9 +29,9 @@ function sectionComponent(counter,heading){
     return cardTemplate.content.cloneNode(true);
 }
 
-export class partComponent extends HTMLElement{
+export class colorComponent extends HTMLElement{
     static current=undefined
-    constructor(intializer,counter,heading,current,data)
+    constructor(intializer,color)
     {
         super()
         
@@ -36,15 +39,15 @@ export class partComponent extends HTMLElement{
         this.intializer=intializer
         this.counter=counter
         this.heading=heading
-        partComponent.current=current
+        colorComponent.current=current
         this.data=data
         
         shadowRoot.appendChild(sectionComponent(this.counter,this.heading))
         
         this.onclick=()=>{
-            this.changeContent(partComponent.current,this.heading)
+            this.changeContent(colorComponent.current,this.heading)
             this.removeObject()            
-            partComponent.current=this.heading            
+            colorComponent.current=this.heading            
             this.showObject()
         }
     }    
@@ -66,12 +69,12 @@ export class partComponent extends HTMLElement{
     async removeObject()
     {
         
-        await this.intializer.HideMeshFromObjects(await this.intializer.GetObjectByName(partComponent.current))
+        await this.intializer.HideMeshFromObjects(await this.intializer.GetObjectByName(colorComponent.current))
     }
     
     async showObject()
     {        
-        await this.intializer.ShowAllMeshesFromObject(await this.intializer.GetObjectByName(partComponent.current))
+        await this.intializer.ShowAllMeshesFromObject(await this.intializer.GetObjectByName(colorComponent.current))
         
     }
 
@@ -106,4 +109,4 @@ export class partComponent extends HTMLElement{
     }
 }
 
-customElements.define('part-component',partComponent)
+customElements.define('color-component',colorComponent)
