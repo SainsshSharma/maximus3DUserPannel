@@ -9,12 +9,29 @@ function sectionComponent(counter,heading){
         justify-content: space-around;
         align-items: center;
         cursor:pointer !important;
-      }
+        background-color:grey;
+        border-bottom:  1px solid black;
+        height:17vh;
+
+        }
+
+    .optionsHeading:hover{
+          background-color: rgb(36, 34, 34);
+    }
+
+
       .optionsHeading>*{
         font-size: 22px;
         color: white;
-        padding: 10px;
+        padding:10px;
+        display: flex;
+     
+        width:5vw;
+      
+        
+        
       }
+        
     </style>
     <div class="optionsHeading over">
         <div><img src="https://api.maximus3d.com/${counter}" width=50 height=50></div>
