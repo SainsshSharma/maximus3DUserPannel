@@ -1,5 +1,5 @@
 import stateManagement from "../states/stateManagement";
-function sectionComponent(counter,heading){
+function sectionComponent(counter,heading,colorName){
     const cardTemplate=document.createElement('template')
     cardTemplate.innerHTML=`
     <style>
@@ -17,11 +17,22 @@ function sectionComponent(counter,heading){
       }
       .color{
         background-color:${counter};
+        width:50px;
+        height:50px;
+      }
+      .properties{
+        display:flex;
+        justify-content:flex-start;
+        align-items:center;
+        flex-direction:column;
       }
     </style>
     <div class="optionsHeading over">
         <div class="color"></div>
-        <div>${heading}</div>
+        <div class="properties">
+            <div class="colorHeading">${heading}</div>
+            <div class="colorName">${colorName}</div>
+        </div>
         <i class='bx bx-chevrons-right optionsBtn'></i>
     </div>
     `
@@ -30,38 +41,37 @@ function sectionComponent(counter,heading){
 }
 
 export class colorComponent extends HTMLElement{
-    static current=undefined
-    constructor(intializer,color)
+    // static current=undefined
+    constructor(intializer,parent,name,heading,color,price,colorName)
     {
         super()
         
         const shadowRoot=this.attachShadow({mode:'open'})
         this.intializer=intializer
-        this.data=color
-        colorComponent.current=current
+        this.meshParent=parent
+        this.parent=name
+        this.heading=heading
+        this.color=color
+        this.price=price
+        this.colorName=colorName 
+        // colorComponent.current=current
         
         
-        shadowRoot.appendChild(sectionComponent(this.counter,this.heading))
+        shadowRoot.appendChild(sectionComponent(this.color,this.heading,this.colorName))
         
         this.onclick=()=>{
-            
+            this.changeColor()
+            stateManagement.propertiesSelected.push({parent:this.meshParent,color:color,price:price})
+            console.log(stateManagement)
         }
     }    
 
-    
-
-    async removeObject()
+    async changeColor()
     {
         
-        await this.intializer.HideMeshFromObjects(await this.intializer.GetObjectByName(colorComponent.current))
+        await this.intializer.SetColor(await this.intializer.GetObjectByName(this.parent),this.color)
     }
     
-    async showObject()
-    {        
-        await this.intializer.ShowAllMeshesFromObject(await this.intializer.GetObjectByName(colorComponent.current))
-        
-    }
-
     connectedCallback()
     {
 

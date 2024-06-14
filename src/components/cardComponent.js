@@ -104,18 +104,38 @@ export class CardComponent extends HTMLElement{
                         keys.push({name:i,child:arr})                        
                     })
 
-                    arr=[]
+                    let colorArr=[]
                     keys.map(i=>{
                         i.child.map(j=>{
                             
                             //i.name => parent, j=>child
+                            let arr=Object.keys(this.data[i.name][j]).filter(i=>{
+                                if(i=='color')
+                                    return true;
+                            })
 
-                            console.log(this.data[i.name][j])
-                            arr.push({name:j,property:this.data[i.name][j]})
+                            if(arr[0]==='color')
+                                colorArr.push({parent:i.name,name:j,property:this.data[i.name][j]})
                         })
                     })
 
-                    console.log(arr)
+                    colorArr.map(i=>{
+                        //i.name=> mesh name, i.property=> properties                        
+                        let name=i.name
+                        let heading=i.property.heading
+                        let color=undefined,price=undefined,colorName=undefined;
+                        console.log(i.parent)
+                        i.property.color.map(j=>{
+                            
+                            price=j.attribute_price,
+                            color=j.attribute_value,
+                            colorName=j.attribute_name
+                        })
+
+                        console.log(name,heading,color,price,colorName)
+                        let colorComp=new colorComponent(this.intializer,i.parent,name,heading,color,price,colorName)
+                        overContainer.appendChild(colorComp)
+                    })
 
                 }
                 else
