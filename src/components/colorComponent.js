@@ -9,6 +9,10 @@ function sectionComponent(counter,heading,colorName){
         justify-content: space-around;
         align-items: center;
         cursor:pointer !important;
+        background-color:#034951;
+        border-bottom:  1px solid #aedde5;
+        height:13vh;
+        border-radius: 6px;
       }
       .optionsHeading>*{
         font-size: 22px;
@@ -17,8 +21,8 @@ function sectionComponent(counter,heading,colorName){
       }
       .color{
         background-color:${counter};
-        width:50px;
-        height:50px;
+        width:30px;
+        height:30px;
       }
       .properties{
         display:flex;
@@ -26,6 +30,14 @@ function sectionComponent(counter,heading,colorName){
         align-items:center;
         flex-direction:column;
       }
+    .optionsHeading:hover{
+        background-color: #003135;
+        transform: scale(.98);
+        transition: transform .4s;
+    }
+           .colorHeading{
+           border-radius:25px;
+           }
     </style>
     <div class="optionsHeading over">
         <div class="color"></div>

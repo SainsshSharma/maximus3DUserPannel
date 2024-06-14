@@ -130,11 +130,11 @@ export class CardComponent extends HTMLElement{
                             price=j.attribute_price,
                             color=j.attribute_value,
                             colorName=j.attribute_name
+                            
+                            let colorComp=new colorComponent(this.intializer,i.parent,name,heading,color,price,colorName)
+                            overContainer.appendChild(colorComp)
                         })
 
-                        console.log(name,heading,color,price,colorName)
-                        let colorComp=new colorComponent(this.intializer,i.parent,name,heading,color,price,colorName)
-                        overContainer.appendChild(colorComp)
                     })
 
                 }

@@ -10,33 +10,33 @@ function sectionComponent(counter,heading){
         align-items: center;
         cursor:pointer !important;
         background-color:#034951;
-        border-bottom:  1px solid black;
-        height:17vh;
+        border-bottom:  1px solid #aedde5;
+        height:13vh;
+        border-radius: 4px;
        
         }
 
     .optionsHeading:hover{
-          background-color: rgb(36, 34, 34);
-           
-           transform: scale(.91);
+        background-color: #003135;
+        transform: scale(.98);
+        transition: transform .4s;
     }
 
 
-      .optionsHeading>*{
-        font-size: 22px;
+    .optionsHeading>*{
+        font-size: 20px;
         color: white;
-        padding:10px;
         display: flex;
-     
-        width:5vw;
-      
-        
-        
-      }
+    }
+
+    .imgg{
+        border-radius:25px;
+        box-shadow: 0 0 10px 003135;
+        }
         
     </style>
     <div class="optionsHeading over">
-        <div><img src="https://api.maximus3d.com/${counter}" width=50 height=50></div>
+        <div><img class="imgg" src="https://api.maximus3d.com/${counter}" width=50 height=50></div>
         <div>${heading}</div>
         <i class='bx bx-chevrons-right optionsBtn'></i>
     </div>
