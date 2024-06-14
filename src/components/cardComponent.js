@@ -1,4 +1,5 @@
 import stateManagement from "../states/stateManagement";
+import { colorComponent } from "./colorComponent";
 import { partComponent } from "./partComponent";
 function sectionComponent(counter,heading){
     const cardTemplate=document.createElement('template')
@@ -103,8 +104,19 @@ export class CardComponent extends HTMLElement{
                         keys.push({name:i,child:arr})                        
                     })
 
-                    
-                    console.log(keys)
+                    arr=[]
+                    keys.map(i=>{
+                        i.child.map(j=>{
+                            
+                            //i.name => parent, j=>child
+
+                            console.log(this.data[i.name][j])
+                            arr.push({name:j,property:this.data[i.name][j]})
+                        })
+                    })
+
+                    console.log(arr)
+
                 }
                 else
                 {

@@ -37,34 +37,18 @@ export class colorComponent extends HTMLElement{
         
         const shadowRoot=this.attachShadow({mode:'open'})
         this.intializer=intializer
-        this.counter=counter
-        this.heading=heading
+        this.data=color
         colorComponent.current=current
-        this.data=data
+        
         
         shadowRoot.appendChild(sectionComponent(this.counter,this.heading))
         
         this.onclick=()=>{
-            this.changeContent(colorComponent.current,this.heading)
-            this.removeObject()            
-            colorComponent.current=this.heading            
-            this.showObject()
+            
         }
     }    
 
-    changeContent(prev,curr)
-    {
-        
-        stateManagement.segementSelected=stateManagement.segementSelected.filter(i=>{
-            if(prev===i.name)
-                return false
-            else
-                return true
-        })
-        stateManagement.segementSelected.push({name:curr,price:this.data[curr].price})
-
-        console.log(stateManagement)
-    }
+    
 
     async removeObject()
     {
