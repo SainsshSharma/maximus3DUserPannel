@@ -6,6 +6,7 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  
 }
 body{
   height: 100vh;
@@ -17,6 +18,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(174,221,229,1) 100%);
 }
 .threejs{
   width: 100%;
@@ -27,13 +29,14 @@ body{
 .optionsPannel{
   height: 100%;
   width: 40%;
-  background-color: #003135;
+  background-color: #003135 ;
   transition: all 0.2s ease-in;
   overflow-x: hidden;  
   position: relative;
   transition: all 0.2s ease;
   border-top-left-radius: 15px;
   box-shadow: 0 0 10px gray;
+  /* cursor: pointer; */
 }
 .optionsHeading{
   width: 100%;
@@ -149,4 +152,6 @@ body{
   padding: 5px 10px;
   justify-content: space-around;
   align-items: center;
+  background-color: #003135;
 }
+
