@@ -11,6 +11,7 @@ function sectionComponent(counter,heading){
         display: flex;
         justify-content: space-around;
         align-items: center;
+        cursor:pointer;
       }
       .optionsHeading>*{
         font-size: 22px;
@@ -19,7 +20,7 @@ function sectionComponent(counter,heading){
       }
     </style>
     <div class="optionsHeading over">
-        <div>0${counter}</div>
+        <div class="option-counter">0${counter}</div>
         <div>${heading}</div>
         <i class='bx bx-chevrons-right optionsBtn'></i>
     </div>
@@ -130,7 +131,7 @@ export class CardComponent extends HTMLElement{
                             price=j.attribute_price,
                             color=j.attribute_value,
                             colorName=j.attribute_name
-                            
+
                             let colorComp=new colorComponent(this.intializer,i.parent,name,heading,color,price,colorName)
                             overContainer.appendChild(colorComp)
                         })

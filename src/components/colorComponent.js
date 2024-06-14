@@ -15,7 +15,7 @@ function sectionComponent(counter,heading,colorName){
         border-radius: 6px;
       }
       .optionsHeading>*{
-        font-size: 22px;
+        font-size: 18px;
         color: white;
         padding: 10px;
       }
@@ -35,9 +35,9 @@ function sectionComponent(counter,heading,colorName){
         transform: scale(.98);
         transition: transform .4s;
     }
-           .colorHeading{
-           border-radius:25px;
-           }
+    .colorHeading{
+       border-radius:25px;
+    }
     </style>
     <div class="optionsHeading over">
         <div class="color"></div>

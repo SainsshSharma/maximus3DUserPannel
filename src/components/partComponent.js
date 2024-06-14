@@ -6,8 +6,7 @@ function sectionComponent(counter,heading){
     .optionsHeading{
         width: 100%;
         display: flex;
-        justify-content: space-around;
-        align-items: center;
+        
         cursor:pointer !important;
         background-color:#034951;
         border-bottom:  1px solid #aedde5;
@@ -27,17 +26,23 @@ function sectionComponent(counter,heading){
         font-size: 20px;
         color: white;
         display: flex;
+        margin-left:1vw;
+        margin-top:3vh;
     }
 
     .imgg{
         border-radius:25px;
-        box-shadow: 0 0 10px 003135;
+        box-shadow: 0 0 10px #003135;
+    }
+    .partsHeading{
+        margin-left:1vw;
+        margin-top:3vh;
         }
         
     </style>
     <div class="optionsHeading over">
         <div><img class="imgg" src="https://api.maximus3d.com/${counter}" width=50 height=50></div>
-        <div>${heading}</div>
+        <div class="partsHeading">${heading}</div>
         <i class='bx bx-chevrons-right optionsBtn'></i>
     </div>
     `
