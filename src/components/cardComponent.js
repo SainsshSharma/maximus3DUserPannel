@@ -13,21 +13,24 @@ function sectionComponent(counter,heading){
         justify-content: space-around;
         align-items: center;
         cursor:pointer;
-        padding-top:10px;
-        padding-bottom:5px;
+        padding:10px;
         border-bottom :1px solid rgba(255,255,255,0.5);
       }
-      .optionsHeading>*{
-        font-size: 22px;
-        color: white;
-        
+      .optionsHeading:active{
+        background-color:#52525b;
       }
+      .optionsHeading>*{
+        font-size: 16px;
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+        }
         .option-counter,.optionsBtn{
             min-width:20%;
             text-align: center;
         }
         .optionHeading{
             min-width:60%;
+            font-weight: bold;
             text-align: left;
         }
         

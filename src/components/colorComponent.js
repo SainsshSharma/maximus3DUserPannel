@@ -7,16 +7,19 @@ function sectionComponent(counter,heading,colorName){
     .optionsHeading{
         width: 100%;
         display: flex;
+        flex-direction:row;
         justify-content: space-around;
         align-items: center;
         cursor:pointer !important;
-        background-color:#034951;
+        background-color:#71717a;
+        opacity:95;
         border-bottom:  1px solid #aedde5;
         height:13vh;
-        border-radius: 6px;
+        
       }
       .optionsHeading>*{
-        font-size: 18px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
         color: white;
         padding: 10px;
       }
@@ -28,11 +31,12 @@ function sectionComponent(counter,heading,colorName){
       .properties{
         display:flex;
         justify-content:flex-start;
+        gap:5px;
         align-items:center;
-        flex-direction:column;
+        flex-direction:row;
       }
     .optionsHeading:hover{
-        background-color: #003135;
+        background-color: #52525b;
         transform: scale(.98);
         transition: transform .4s;
     }

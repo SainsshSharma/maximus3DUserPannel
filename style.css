@@ -13,13 +13,17 @@ body{
   height: 100vh;
   width: 100%;
 }
+p{
+  line-height: 1.2em;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif
+}
 #app{
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(174,221,229,1) 100%);
   transition: all 0.5s ease;
 }
 .threejs{
@@ -31,12 +35,13 @@ body{
 .optionsPannel{
   height: 100%;
   width: 40%;
-  background-color: #003135 ;
+  background-color: #71717a ;
   transition: all 0.2s ease-in;
   overflow-x: hidden;  
   position: relative;
   transition: all 0.2s ease;
-  border-top-left-radius: 15px;
+  font-size: 14px;
+  font-family: sa;
   box-shadow: 0 0 10px gray;
   /* cursor: pointer; */
 }
@@ -126,9 +131,9 @@ body{
   width: max-content;
   word-spacing:-1px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background-color: #003135 ;
-  color: white;
-  padding: 5px 10px;
+  background-color:white;
+  color: black;
+  padding: 6px 20px;
   border-radius:0.75rem;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
@@ -150,27 +155,21 @@ body{
   position: absolute;
   left: 0;
   top: 0;
-  width: 60%;
+  width: 75%;
   display: flex;
   flex-direction: row;
-  padding: 5px 10px;
+  padding: 10px 10px;
   justify-content: space-around;
   align-items: center;
-  background-color: #003135;
-  margin-left: 8%;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
+  background-color: #71717a;
   color: whitesmoke;
   box-shadow: 0 0 10px grey;
 }
 
-.icon{
-  color: #003135 ;
-}
 .model-name,.priceValue{
+  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   font-size: 26px;
-  letter-spacing: 0.2cm;
 }
 .optionsBtn{
   min-width: 20%;
