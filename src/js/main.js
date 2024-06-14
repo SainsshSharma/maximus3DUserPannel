@@ -10,7 +10,7 @@ let canvas_measurement={
     width:0
 };
 window.onload=async ()=>{
-    // LoadHtml()
+    LoadHtml()
     LoadCss()
     // Utility()    
     intializer=await main();
@@ -66,7 +66,7 @@ function getAllDataFromKey(Key,model,intializer)
         data.push({heading,name,image,objectName})
     })
 
-    console.log(data)
+    
     data.push({heading:['color'],name:['name'],image:['image'],objecName:['objectName']})
     data.map((i,indx)=>{
         if(i.heading[0]==="color")
@@ -92,6 +92,7 @@ async function main()
     
     // console.log(model)
     getAllDataFromKey(model.segment,model,intializer)
+    document.querySelector('.model-name').innerHTML=model.name
     return intializer
 }
 
@@ -124,14 +125,14 @@ function get_screenshot(){
         a.download='screenshot.jpeg',
         a.click();
     }
-    console.log("screenshot");
+    
 }
 
 function reset_the_camera(){
     if(intializer!==undefined){
         intializer.controls.reset()
     }
-    console.log("reset-camera")
+    
 }
 
 function full_screen(){

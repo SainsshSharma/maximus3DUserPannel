@@ -1,4 +1,5 @@
 import stateManagement from "../states/stateManagement";
+import { stateAction } from "../states/stateAction";
 function sectionComponent(counter,heading,colorName){
     const cardTemplate=document.createElement('template')
     cardTemplate.innerHTML=`
@@ -73,11 +74,20 @@ export class colorComponent extends HTMLElement{
         
         this.onclick=()=>{
             this.changeColor()
+            this.changeStateManagement()
             stateManagement.propertiesSelected.push({parent:this.meshParent,color:color,price:price})
             console.log(stateManagement)
+            stateAction()
         }
-    }    
+    }  
 
+    changeStateManagement()
+    {
+        stateManagement.propertiesSelected=stateManagement.propertiesSelected.filter(i=>{
+            if(i.parent!=this.meshParent)
+                return true
+        })
+    }
     async changeColor()
     {
         

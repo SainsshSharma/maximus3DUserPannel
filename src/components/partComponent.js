@@ -1,4 +1,5 @@
 import stateManagement from "../states/stateManagement";
+import { stateAction } from "../states/stateAction";
 function sectionComponent(counter,heading){
     const cardTemplate=document.createElement('template')
     cardTemplate.innerHTML=`
@@ -65,6 +66,7 @@ export class partComponent extends HTMLElement{
             this.removeObject()            
             partComponent.current=this.heading            
             this.showObject()
+            stateAction()
         }
     }    
     changeContent(prev,curr)
@@ -76,9 +78,7 @@ export class partComponent extends HTMLElement{
             else
                 return true
         })
-        stateManagement.segementSelected.push({name:curr,price:this.data[curr].price})
-
-        console.log(stateManagement)
+        stateManagement.segementSelected.push({name:curr,price:this.data[curr].price})        
     }
     
     async removeObject()

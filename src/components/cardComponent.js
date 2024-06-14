@@ -1,6 +1,7 @@
 import stateManagement from "../states/stateManagement";
 import { colorComponent } from "./colorComponent";
 import { partComponent } from "./partComponent";
+import { stateAction } from "../states/stateAction";
 function sectionComponent(counter,heading){
     const cardTemplate=document.createElement('template')
     cardTemplate.innerHTML=`
@@ -49,7 +50,7 @@ export class CardComponent extends HTMLElement{
                 this.LoadModel()
 
         stateManagement.segementSelected.push({name:this.meshData.name[0],price:this.data[this.meshData.name[0]].price})
-        
+        stateAction()
         this.onclick=()=>{
             let overContainer=document.querySelector('.overContainer')
             overContainer.classList.toggle('open')
@@ -66,6 +67,7 @@ export class CardComponent extends HTMLElement{
                             
                             let part=new partComponent(this.intializer,img,name,this.meshData.name[0],this.data)
                             overContainer.appendChild(part)
+                            
                         })
                     }
                 })
@@ -124,7 +126,7 @@ export class CardComponent extends HTMLElement{
                         let name=i.name
                         let heading=i.property.heading
                         let color=undefined,price=undefined,colorName=undefined;
-                        console.log(i.parent)
+                        
                         i.property.color.map(j=>{
                             
                             price=j.attribute_price,
