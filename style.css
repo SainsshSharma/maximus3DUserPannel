@@ -27,11 +27,13 @@ body{
 .optionsPannel{
   height: 100%;
   width: 40%;
-  background-color: rgba(50,50,50,0.5);
+  background-color: #003135;
   transition: all 0.2s ease-in;
   overflow-x: hidden;  
   position: relative;
   transition: all 0.2s ease;
+  border-top-left-radius: 15px;
+  box-shadow: 0 0 10px gray;
 }
 .optionsHeading{
   width: 100%;
@@ -73,8 +75,7 @@ body{
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
   width:0%;
   background-color: rgba(50,50,50,0.5);
   height: 100vh;

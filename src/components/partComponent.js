@@ -9,14 +9,16 @@ function sectionComponent(counter,heading){
         justify-content: space-around;
         align-items: center;
         cursor:pointer !important;
-        background-color:grey;
+        background-color:#034951;
         border-bottom:  1px solid black;
         height:17vh;
-
+       
         }
 
     .optionsHeading:hover{
           background-color: rgb(36, 34, 34);
+           
+           transform: scale(.91);
     }
 
 
