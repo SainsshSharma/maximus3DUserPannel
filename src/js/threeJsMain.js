@@ -81,6 +81,7 @@ export class ThreeJsInitialiser{
         }
         
         this.loaderManager.onLoad=()=>{
+          document.querySelector('.loading').classList.toggle('fade')
           document.querySelector('.loading').style.display="none";
         //   document.querySelector('.loading').style.display="none";
           console.log("Model Success")

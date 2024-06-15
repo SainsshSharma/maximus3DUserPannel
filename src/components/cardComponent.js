@@ -13,16 +13,28 @@ function sectionComponent(counter,heading){
         justify-content: space-around;
         align-items: center;
         cursor:pointer;
+        padding-top:10px;
+        padding-bottom:5px;
+        border-bottom :1px solid rgba(255,255,255,0.5);
       }
       .optionsHeading>*{
         font-size: 22px;
         color: white;
-        padding: 10px;
+        
       }
+        .option-counter,.optionsBtn{
+            min-width:20%;
+            text-align: center;
+        }
+        .optionHeading{
+            min-width:60%;
+            text-align: left;
+        }
+        
     </style>
     <div class="optionsHeading over">
         <div class="option-counter">0${counter}</div>
-        <div>${heading}</div>
+        <div class="optionHeading">${heading}</div>
         <i class='bx bx-chevrons-right optionsBtn'></i>
     </div>
     `

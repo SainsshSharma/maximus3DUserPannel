@@ -10,7 +10,7 @@ let canvas_measurement={
     width:0
 };
 window.onload=async ()=>{
-    LoadHtml()
+    // LoadHtml()
     LoadCss()
     // Utility()    
     intializer=await main();

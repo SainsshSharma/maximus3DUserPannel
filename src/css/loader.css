@@ -8,9 +8,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #4e8085 ;
+    transition: all 0.5s ease;
+}
+.fade{
+  transition: all 0.5s ease;
 }
 .loader {
-    --path: #2f3545;
+    --path: #fff;
     --dot: #5628ee;
     --duration: 3s;
     width: 44px;

@@ -7,14 +7,12 @@ function sectionComponent(counter,heading){
     .optionsHeading{
         width: 100%;
         display: flex;
-        
         cursor:pointer !important;
         background-color:#034951;
         border-bottom:  1px solid #aedde5;
         height:13vh;
         border-radius: 4px;
-       
-        }
+    }
 
     .optionsHeading:hover{
         background-color: #003135;
@@ -30,14 +28,17 @@ function sectionComponent(counter,heading){
         margin-left:1vw;
         margin-top:3vh;
     }
+      
 
     .imgg{
         border-radius:25px;
         box-shadow: 0 0 10px #003135;
     }
+  
     .partsHeading{
         margin-left:1vw;
         margin-top:3vh;
+       
         }
         
     </style>

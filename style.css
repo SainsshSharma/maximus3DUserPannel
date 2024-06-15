@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
 *{
   margin: 0px;
   padding: 0px;
-  font-family: "Mulish", sans-serif;
+  font-family: "Bitter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  user-select: none;
   
 }
 body{
@@ -19,6 +20,7 @@ body{
   justify-content: center;
   align-items: center;
   background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(174,221,229,1) 100%);
+  transition: all 0.5s ease;
 }
 .threejs{
   width: 100%;
@@ -83,7 +85,7 @@ body{
   background-color: rgba(50,50,50,0.5);
   height: 100vh;
   top: 0;
-  left: 25%;
+  left: 15%;
   transition: all 0.5s ease;
   right: 0;
   z-index: 5;
@@ -124,6 +126,8 @@ body{
   width: max-content;
   word-spacing:-1px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #003135 ;
+  color: white;
   padding: 5px 10px;
   border-radius:0.75rem;
   opacity: 0;
@@ -146,12 +150,39 @@ body{
   position: absolute;
   left: 0;
   top: 0;
-  width: 80%;
+  width: 60%;
   display: flex;
   flex-direction: row;
   padding: 5px 10px;
   justify-content: space-around;
   align-items: center;
   background-color: #003135;
+  margin-left: 8%;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  color: whitesmoke;
+  box-shadow: 0 0 10px grey;
 }
 
+.icon{
+  color: #003135 ;
+}
+.model-name,.priceValue{
+  font-weight: 600;
+  font-size: 26px;
+  letter-spacing: 0.2cm;
+}
+.optionsBtn{
+  min-width: 20%;
+  text-align: center;
+}
+.optionHeading{
+  min-width: 100%;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  
+}
+.optionsHeading{
+  width:100%;
+}
