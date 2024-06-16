@@ -14,18 +14,20 @@ function sectionComponent(counter,heading){
         align-items: center;
         cursor:pointer;
         padding:10px;
+        height:5vh;
         border-bottom :1px solid rgba(255,255,255,0.5);
       }
       .optionsHeading:active{
         background-color:#52525b;
       }
       .optionsHeading>*{
-        font-size: 16px;
+        font-size: 14px;
         color: white;
         font-family: 'Open Sans', sans-serif;
+        font-weigth:bold;
         }
         .option-counter,.optionsBtn{
-            min-width:20%;
+            min-width:15%;
             text-align: center;
         }
         .optionHeading{

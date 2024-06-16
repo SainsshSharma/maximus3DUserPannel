@@ -9,16 +9,17 @@ function sectionComponent(counter,heading){
         display: flex;
         cursor:pointer !important;
         background-color:#71717a;
-        opacity:80%;
+        opacity:90%;
         border-bottom:  1px solid black;
         height:13vh;
-        border-radius: 4px;
+        box-left-shadow: 0 0 10px gray;
+        text-transform: uppercase;
+      
     }
 
     .optionsHeading:hover{
         background-color: #71717a;
-        transform: scale(.98);
-        transition: transform .4s;
+       
     }
 
 
@@ -32,8 +33,10 @@ function sectionComponent(counter,heading){
       
 
     .imgg{
-        border-radius:25px;
+      
         box-shadow: 0 0 10px #003135;
+        height:50px;
+        width:70px
     }
   
     .partsHeading{

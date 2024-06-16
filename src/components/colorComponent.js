@@ -8,40 +8,41 @@ function sectionComponent(counter,heading,colorName){
         width: 100%;
         display: flex;
         flex-direction:row;
-        justify-content: space-around;
+        text-transform: uppercase;
         align-items: center;
         cursor:pointer !important;
         background-color:#71717a;
-        opacity:95;
+        opacity:90%;
         border-bottom:  1px solid #aedde5;
         height:13vh;
         
       }
       .optionsHeading>*{
         font-family: 'Open Sans', sans-serif;
-        font-size: 16px;
+        font-size: 15px;
+        margin-left:1vw;
         color: white;
         padding: 10px;
       }
       .color{
         background-color:${counter};
-        width:30px;
-        height:30px;
+        width:60px;
+        height:40px;
+        box-shadow: 0 0 10px #003135;
       }
       .properties{
         display:flex;
-        justify-content:flex-start;
-        gap:5px;
-        align-items:center;
-        flex-direction:row;
+       flex-direction:column;
       }
     .optionsHeading:hover{
         background-color: #52525b;
-        transform: scale(.98);
-        transition: transform .4s;
+      
     }
-    .colorHeading{
-       border-radius:25px;
+   
+    .colorName{
+        font-size: 9px;
+        color:#d4d4d8;
+      
     }
     </style>
     <div class="optionsHeading over">
