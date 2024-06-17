@@ -12,22 +12,22 @@ function sectionComponent(counter,heading,colorName){
         align-items: center;
         cursor:pointer !important;
         background-color:#71717a;
-        opacity:90%;
         border-bottom:  1px solid #aedde5;
         height:13vh;
+        transition:all 200ms ease-in;
         
       }
       .optionsHeading>*{
         font-family: 'Open Sans', sans-serif;
-        font-size: 15px;
+        font-size: 14px;
         margin-left:1vw;
         color: white;
         padding: 10px;
       }
       .color{
         background-color:${counter};
-        width:60px;
-        height:40px;
+        width:50px;
+        height:20px;
         box-shadow: 0 0 10px #003135;
       }
       .properties{

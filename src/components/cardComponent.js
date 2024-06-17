@@ -17,8 +17,8 @@ function sectionComponent(counter,heading){
         height:5vh;
         border-bottom :1px solid rgba(255,255,255,0.5);
       }
-      .optionsHeading:active{
-        background-color:#52525b;
+      .optionsHeading:hover{
+        background-color:#3f3f46;
       }
       .optionsHeading>*{
         font-size: 14px;

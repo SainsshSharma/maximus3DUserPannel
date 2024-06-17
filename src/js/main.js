@@ -89,8 +89,6 @@ async function main()
     const intializer=new ThreeJsInitialiser(await getFile(5))
     await intializer.start()
     let model=await getJson(5)
-    
-    // console.log(model)
     getAllDataFromKey(model.segment,model,intializer)
     document.querySelector('.model-name').innerHTML=model.name
     return intializer
@@ -139,7 +137,7 @@ function full_screen(){
     document.querySelector(".cross-div").style.display="block";
     right_panel.style.display="none";
     left_panel.style.display="none";
-    intializer.renderer.setSize(window.innerWidth,window.innerHeight)
+    intializer.renderer.setSize(window.innerWidth*0.8,canvas_measurement.height)
 }
 
 let cross=document.querySelector(".cross");
@@ -148,5 +146,4 @@ cross.addEventListener("click",function(){
     right_panel.style.display="block";
     left_panel.style.display="flex";
     intializer.renderer.setSize(canvas_measurement.width,canvas_measurement.height);
-
 })

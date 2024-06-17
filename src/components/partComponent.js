@@ -6,25 +6,28 @@ function sectionComponent(counter,heading){
     <style>
     .optionsHeading{
         width: 100%;
+        box-sizing: border-box;
         display: flex;
         cursor:pointer !important;
         background-color:#71717a;
-        opacity:90%;
         border-bottom:  1px solid black;
         height:13vh;
         box-left-shadow: 0 0 10px gray;
         text-transform: uppercase;
+        padding:10px;
+        transition:all 200ms ease-in;
       
     }
 
     .optionsHeading:hover{
-        background-color: #71717a;
+        background-color: #52525b;
        
     }
 
 
     .optionsHeading>*{
-        font-size: 20px;
+        font-size: 14px;
+        font-weight:bold;
         color: white;
         display: flex;
         margin-left:1vw;
@@ -35,8 +38,8 @@ function sectionComponent(counter,heading){
     .imgg{
       
         box-shadow: 0 0 10px #003135;
-        height:50px;
-        width:70px
+        height:40px;
+        width:50px
     }
   
     .partsHeading{

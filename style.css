@@ -28,11 +28,10 @@ p{
   position: fixed;
 }
 .threejs{
-  width: 90vw;
-  height: 170vh;
+  width: 90%;
+  height: 100%;
+  max-width: 90%;
   overflow: hidden;
-  margin-top:8vh ;
-  margin-right:10%;
   
 }
 .optionsPannel{
@@ -89,7 +88,7 @@ p{
   position: absolute;
   display: flex;
   flex-direction: column;
-
+  margin-left: 5%;
   width:0%;
   background-color: rgba(50,50,50,0.5);
   height: 100vh;
@@ -98,6 +97,7 @@ p{
   transition: all 0.5s ease;
   right: 0;
   z-index: 5;
+  
 }
 
 .open{
@@ -110,7 +110,7 @@ p{
 
 /* left panel */
 .left-panel{
-  width: 12%;
+  width: 15%;
   margin: 10px;
   padding: 10px;
   display:flex;
@@ -152,6 +152,7 @@ p{
   display: none;
   position: absolute;
   right: 0;
+  z-index: 99;
   margin: 0 10%;
 }
 
@@ -160,20 +161,19 @@ p{
   left: 0;
   top: 0;
   width: 85%;
+  max-width: 85%;
   display: flex;
   flex-direction: row;
   padding: 10px 10px;
   justify-content: space-around;
   align-items: center;
-  background-color: #71717a;
-  color: whitesmoke;
-  box-shadow: 0 0 10px grey;
+  color: black;
 }
 
 .model-name,.priceValue{
   font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
   font-size: 26px;
+  color: #333;
 }
 .optionsBtn{
   min-width: 20%;
