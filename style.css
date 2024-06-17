@@ -29,9 +29,10 @@ p{
 }
 .threejs{
   width: 90%;
-  height: 100%;
+  height: 150vh;
   max-width: 90%;
   overflow: hidden;
+  margin-right: 10vw;
   
 }
 .optionsPannel{
@@ -158,22 +159,27 @@ p{
 
 .upper-panel{
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 5%;
+  top: 15%;
   width: 85%;
-  max-width: 85%;
+  max-width: 70%;
   display: flex;
   flex-direction: row;
-  padding: 10px 10px;
-  justify-content: space-around;
-  align-items: center;
+
+  justify-content: space-between;
+
   color: black;
 }
 
-.model-name,.priceValue{
+.model-name{
   font-family: 'Open Sans', sans-serif;
   font-size: 26px;
-  color: #333;
+  color: #0c0b0b;
+}
+.priceValue{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
+  color: #595c5a;
 }
 .optionsBtn{
   min-width: 20%;
@@ -188,4 +194,15 @@ p{
 }
 .optionsHeading{
   width:100%;
+}
+.logo{
+  position: absolute;
+  top:5%;
+  left:2%;
+  color: #333;
+  font-size: 30px;
+  font-weight: bolder;
+  font-family: "Oswald", sans-serif;
+
+
 }
