@@ -159,27 +159,30 @@ p{
 
 .upper-panel{
   position: absolute;
-  left: 5%;
-  top: 15%;
+  left: 3%;
+  top: 13%;
   width: 85%;
   max-width: 70%;
   display: flex;
   flex-direction: row;
-
-  justify-content: space-between;
-
   color: black;
+  justify-content: space-between;
 }
 
 .model-name{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Bitter', sans-serif;
   font-size: 26px;
   color: #0c0b0b;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+ 
 }
 .priceValue{
   font-family: 'Open Sans', sans-serif;
   font-size: 22px;
-  color: #595c5a;
+  color: #030303;
+  letter-spacing: 2px;
 }
 .optionsBtn{
   min-width: 20%;
@@ -199,10 +202,25 @@ p{
   position: absolute;
   top:5%;
   left:2%;
-  color: #333;
-  font-size: 30px;
-  font-weight: bolder;
+  color: #050505;
+  font-size: 20px;
+  font-weight: normal;
   font-family: "Oswald", sans-serif;
+  letter-spacing: 4px;
+  display: flex;
+  flex: row;
+}
 
-
+.maximus{
+  font-weight: bold;
+}
+.d3{
+     height: 20px ;
+     width: 30px;
+     background-color: #030303;
+     color: #fff;
+     padding: 2px;
+     font-size: 17px;
+     font-weight: bold;
+     margin-left: 5% ;
 }
