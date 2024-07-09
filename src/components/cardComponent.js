@@ -173,7 +173,8 @@ export class CardComponent extends HTMLElement{
 
     async LoadModel()
     {
-        await this.intializer.ShowAllMeshesFromObject(await this.intializer.GetObjectByName(this.meshData.name[0]))
+        // console.log(await this.meshData.name[0]);
+        await this.intializer.ShowAllMeshesFromObject(await this.intializer.GetObjectByName(await this.meshData.name[0]))
     }
 
     connectedCallback()
@@ -202,7 +203,7 @@ export class CardComponent extends HTMLElement{
     {
         if(attrName.toLowerCase()=='content')
         {
-            console.log(newVal)          
+            // console.log(newVal)          
         }        
     }
 }

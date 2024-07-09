@@ -15,5 +15,5 @@ export function stateAction()
     
 
     priceValue.innerHTML=price+" ₹"
-    console.log(stateManagement)
+    // console.log(stateManagement)
 }

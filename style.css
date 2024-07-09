@@ -200,7 +200,7 @@ p{
 }
 .logo{
   position: absolute;
-  top:5%;
+  top:2%;
   left:2%;
   color: #050505;
   font-size: 20px;
@@ -208,11 +208,15 @@ p{
   font-family: "Oswald", sans-serif;
   letter-spacing: 4px;
   display: flex;
-  flex: row;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
 }
 
 .maximus{
+  font-family: poppins;
   font-weight: bold;
+  font-size: larger;
 }
 .d3{
      height: 20px ;
@@ -222,5 +226,5 @@ p{
      padding: 2px;
      font-size: 17px;
      font-weight: bold;
-     margin-left: 5% ;
+     /* margin-left: 5% ; */
 }

@@ -89,7 +89,7 @@ export class ThreeJsInitialiser{
         }        
 
         animate()
-        console.log(this.scene)
+        // console.log(this.scene)
         resolve("Three js Scene")
       }
       else
